@@ -23,7 +23,6 @@
         config = {
           allowUnfree = true;
           permittedInsecurePackages = [
-            # FIXME:: add any insecure packages you absolutely need here
           ];
         };
         overlays = [
@@ -76,7 +75,7 @@
 
       nixosConfigurations.nixos = mkNixosConfiguration {
         hostname = "nixos";
-        username = "nixos"; # FIXME: replace with your own username!
+        username = "bswck";
         modules = [
           nixos-wsl.nixosModules.wsl
           ./wsl.nix
