@@ -1,4 +1,4 @@
-# nixos-wslcfg
+# nixos-configuration
 
 This repository is intended to be a sane, batteries-included starter template
 for running a LunarVim-powered NixOS development environment on WSL.
@@ -80,7 +80,7 @@ sudo nix-channel --update
 * Get a copy of this repo (you'll probably want to fork it eventually):
 ```bash
 nix-shell -p git neovim
-git clone https://github.com/bswck/nixos-wslcfg /tmp/cfg
+git clone https://github.com/bswck/nixos-configuration /tmp/cfg
 cd /tmp/cfg
 ```
 
