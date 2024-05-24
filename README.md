@@ -62,13 +62,12 @@ customize to your liking both by removing and adding tools that you prefer.
   installer](https://github.com/nix-community/NixOS-WSL)
 * Install it (tweak the command to your desired paths):
 ```powershell
-wsl --import NixOS .\NixOS\ .\nixos-wsl.tar.gz --version 2
-
+wsl --import nixos $env:USERPROFILE\nix\ nixos-wsl.tar.gz
 ```
 
 * Enter the distro:
 ```powershell
-wsl -d NixOS
+wsl -d nixos
 ```
 
 * Set up a channel:
@@ -79,7 +78,7 @@ sudo nix-channel --update
 
 * Get a copy of this repo (you'll probably want to fork it eventually):
 ```bash
-nix-shell -p git neovim
+nix-shell -p git
 git clone https://github.com/bswck/nixos-configuration /tmp/configuration
 cd /tmp/configuration
 ```
