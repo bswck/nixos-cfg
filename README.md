@@ -1,4 +1,4 @@
-# nixos-wsl-starter
+# nixos-wslcfg
 
 This repository is intended to be a sane, batteries-included starter template
 for running a LunarVim-powered NixOS development environment on WSL.
@@ -80,14 +80,14 @@ sudo nix-channel --update
 * Get a copy of this repo (you'll probably want to fork it eventually):
 ```bash
 nix-shell -p git neovim
-git clone https://github.com/LGUG2Z/nixos-wsl-starter.git /tmp/configuration
-cd /tmp/configuration
+git clone https://github.com/bswck/nixos-wslcfg /tmp/cfg
+cd /tmp/cfg
 ```
 
 * Change the username to your desired username in `flake.nix` with `nvim` (or whichever editor you prefer)
 * Apply the configuration
 ```bash
-sudo nixos-rebuild switch --flake /tmp/configuration
+sudo nixos-rebuild switch --flake /tmp/cfg
 ```
 
 * Restart and reconnect to the current WSL shell
@@ -99,7 +99,7 @@ wsl -d NixOS
 * `cd ~` and then `pwd` should now show `/home/<YOUR_USERNAME>`
 * Move the configuration to your new home directory 
 ```bash
-mv /tmp/configuration ~/configuration
+mv /tmp/cfg ~/configuration
 ```
 
 * Go through all the `FIXME:` notices in `~/configuration` and make changes
