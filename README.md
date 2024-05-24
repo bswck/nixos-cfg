@@ -80,14 +80,14 @@ sudo nix-channel --update
 * Get a copy of this repo (you'll probably want to fork it eventually):
 ```bash
 nix-shell -p git neovim
-git clone https://github.com/bswck/nixos-configuration /tmp/cfg
-cd /tmp/cfg
+git clone https://github.com/bswck/nixos-configuration /tmp/configuration
+cd /tmp/configuration
 ```
 
 * Change the username to your desired username in `flake.nix` with `nvim` (or whichever editor you prefer)
 * Apply the configuration
 ```bash
-sudo nixos-rebuild switch --flake /tmp/cfg
+sudo nixos-rebuild switch --flake /tmp/configuration
 ```
 
 * Restart and reconnect to the current WSL shell
@@ -99,7 +99,7 @@ wsl -d NixOS
 * `cd ~` and then `pwd` should now show `/home/<YOUR_USERNAME>`
 * Move the configuration to your new home directory 
 ```bash
-mv /tmp/cfg ~/configuration
+mv /tmp/configuration ~/configuration
 ```
 
 * Go through all the `FIXME:` notices in `~/configuration` and make changes
