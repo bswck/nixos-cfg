@@ -90,8 +90,8 @@ sudo nixos-rebuild switch --flake /tmp/configuration
 
 * Restart and reconnect to the current WSL shell
 ```bash
-wsl -t NixOS
-wsl -d NixOS
+wsl -t nixos
+wsl -d nixos
 ```
 
 * `cd ~` and then `pwd` should now show `/home/<YOUR_USERNAME>`
