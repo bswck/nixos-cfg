@@ -9,6 +9,7 @@
   unstable-packages = with pkgs.unstable; [
     bat
     bottom
+    ca-certificates
     coreutils
     curl
     du-dust
