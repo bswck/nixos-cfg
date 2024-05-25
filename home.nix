@@ -40,9 +40,9 @@
     just
 
     # core languages
-    python310
     python38
     python39
+    hiPrio python310
     python311
     python312
     rustup
