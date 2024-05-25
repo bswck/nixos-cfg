@@ -100,7 +100,7 @@ mv /tmp/configuration ~/configuration
   wherever you want
 * Apply the configuration
 ```bash
-sudo nixos-rebuild switch --flake ~/configuration
+sudo nixos-rebuild switch --flake !$
 ```
 
 Note: If developing in Rust, you'll still be managing your toolchains and components like `rust-analyzer` with `rustup`!
