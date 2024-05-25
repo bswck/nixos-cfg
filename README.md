@@ -38,22 +38,22 @@ VM configuration:
 
 # Installation
 * Get the [latest NixOS-WSL installer](https://github.com/nix-community/NixOS-WSL)
-* Install it (tweak the command to your desired paths):
+* Install it (tweak the command to your desired paths)
 ```powershell
 wsl --import nixos $env:USERPROFILE\nix\ nixos-wsl.tar.gz
 ```
 
-* Enter the distro:
+* Enter the distro
 ```powershell
 wsl -d nixos
 ```
 
-* Set up a channel:
+* Set up a channel
 ```bash
 sudo nix-channel --update
 ```
 
-* Get a copy of this repo (you'll probably want to fork it eventually):
+* Get a copy of this repo (you'll probably want to fork it eventually)
 ```bash
 nix-shell -p git
 git clone https://github.com/bswck/nixos-configuration /tmp/configuration
