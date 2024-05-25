@@ -75,13 +75,12 @@ sudo nix-channel --update
 ```bash
 nix-shell -p git
 git clone https://github.com/bswck/nixos-configuration /tmp/configuration
-cd /tmp/configuration
+cd !$
 ```
 
-* Change the username to your desired username in `flake.nix` with `nvim` (or whichever editor you prefer)
 * Apply the configuration
 ```bash
-sudo nixos-rebuild switch --flake /tmp/configuration
+sudo nixos-rebuild switch --flake !$
 ```
 
 * Restart and reconnect to the current WSL shell
