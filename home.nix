@@ -35,8 +35,6 @@
   ];
 
   stable-packages = with pkgs; [
-    ca-certificates
-
     # key tools
     gh # for bootstrapping
     just
