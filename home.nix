@@ -40,9 +40,13 @@
     just
 
     # core languages
+    python310
+    python38
+    python39
+    python311
+    python312
     rustup
     nodejs
-    python3
     typescript
 
     # rust stuff
