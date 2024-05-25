@@ -23,10 +23,6 @@ Make sure to look at all the `FIXME` notices in the various files which are
 intended to direct you to places where you may want to make configuration
 tweaks.
 
-If you found this starter template useful, please consider
-[sponsoring](https://github.com/sponsors/LGUG2Z) and [subscribing to my YouTube
-channel](https://www.youtube.com/channel/UCeai3-do-9O4MNy9_xjO6mg?sub_confirmation=1).
-
 ## What Is Included
 
 This starter is a lightly-opinionated take on a productive terminal-driven
