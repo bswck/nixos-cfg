@@ -104,5 +104,5 @@ sudo nixos-rebuild switch --flake !$
   enable private HTTPS clones with secret tokens
 * `zsh` config is generated in [home.nix](home.nix) and includes git aliases,
   useful WSL aliases, and
-  [sensible`$WORDCHARS`](https://lgug2z.com/articles/sensible-wordchars-for-most-developers/)
+  [sensible `$WORDCHARS`](https://lgug2z.com/articles/sensible-wordchars-for-most-developers/)
 
