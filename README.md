@@ -55,13 +55,14 @@ sudo nix-channel --update
 
 * Get a copy of this repo (you'll probably want to fork it eventually):
 ```bash
-nix-shell -p git --run "git clone https://github.com/bswck/nixos-configuration /tmp/configuration"
-cd /tmp/configuration
+nix-shell -p git
+git clone https://github.com/bswck/nixos-configuration /tmp/configuration
+cd !$
 ```
 
 * Apply the configuration
 ```bash
-sudo nixos-rebuild switch --flake !$
+sudo nixos-rebuild switch --flake .
 ```
 
 * Restart and reconnect to the current WSL shell
