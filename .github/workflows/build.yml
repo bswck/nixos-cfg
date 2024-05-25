@@ -27,5 +27,5 @@ jobs:
     - name: "Upload tarball"
       uses: "actions/upload-artifact@v4"
       with:
-        name: "nixos-bswck"
-        path: "nixos-bswck.tar.gz"
+        name: "nixos-configuration"
+        path: "nixos-configuration.tar.gz"
