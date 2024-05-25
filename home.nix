@@ -39,12 +39,19 @@
     gh  # for bootstrapping
     just
 
-    # core languages
+    # python setup
     (python38Full // { meta.priority = 4; })
     (python39Full // { meta.priority = 3; })
     (python310Full // { meta.priority = 0; })
     (python311Full // { meta.priority = 1; })
     (python312Full // { meta.priority = 2; })
+    python10Packages.black
+    python10Packages.ruff
+    python10Packages.pipx
+    python10Packages.poethepoet
+    python10Packages.pip-run
+
+    # core languages
     rustup
     nodejs
     typescript
@@ -71,8 +78,6 @@
 
     # formatters and linters
     alejandra  # nix
-    black  # python
-    ruff  # python
     deadnix  # nix
     golangci-lint
     lua52Packages.luacheck
