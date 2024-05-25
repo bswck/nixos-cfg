@@ -36,7 +36,7 @@
 
   stable-packages = with pkgs; [
     # key tools
-    gh # for bootstrapping
+    gh  # for bootstrapping
     just
 
     # core languages
@@ -61,25 +61,25 @@
     tree-sitter
 
     # language servers
-    ccls # c / c++
+    ccls  # c / c++
     nodePackages.typescript-language-server
-    pkgs.nodePackages.vscode-langservers-extracted # html, css, json, eslint
+    pkgs.nodePackages.vscode-langservers-extracted  # html, css, json, eslint
     nodePackages.yaml-language-server
     sumneko-lua-language-server
-    nil # nix
+    nil  # nix
     nodePackages.pyright
 
     # formatters and linters
-    alejandra # nix
-    black # python
-    ruff # python
-    deadnix # nix
+    alejandra  # nix
+    black  # python
+    ruff  # python
+    deadnix  # nix
     golangci-lint
     lua52Packages.luacheck
     nodePackages.prettier
     shellcheck
     shfmt
-    statix # nix
+    statix  # nix
     sqlfluff
     tflint
   ];
@@ -102,7 +102,6 @@ in {
     stable-packages
     ++ unstable-packages
     ++
-    # FIXME: you can add anything else that doesn't fit into the above two lists in here
     [
       # pkgs.some-package
       # pkgs.unstable.some-other-package
