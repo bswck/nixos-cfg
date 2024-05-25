@@ -9,7 +9,6 @@
   unstable-packages = with pkgs.unstable; [
     bat
     bottom
-    ca-certificates
     coreutils
     curl
     du-dust
@@ -36,7 +35,7 @@
   ];
 
   stable-packages = with pkgs; [
-    # FIXME: customize these stable packages to your liking for the languages that you use
+    ca-certificates
 
     # key tools
     gh # for bootstrapping
@@ -44,8 +43,6 @@
 
     # core languages
     rustup
-    go
-    lua
     nodejs
     python3
     typescript
@@ -63,7 +60,6 @@
 
     # language servers
     ccls # c / c++
-    gopls
     nodePackages.typescript-language-server
     pkgs.nodePackages.vscode-langservers-extracted # html, css, json, eslint
     nodePackages.yaml-language-server
