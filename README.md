@@ -1,11 +1,7 @@
-# nixos-configuration
-
-This repository is intended to be a sane, batteries-included starter template
-for running a LunarVim-powered NixOS development environment on WSL.
-
-If you don't want to dig into NixOS too much right now, the only file you need
-to concern yourself with is [home.nix](home.nix). This is where you can add and
-remove binaries to your global `$PATH`.
+# bswck's NixOS configuration
+## [`home.nix`](home.nix)
+Packages, dotfiles, terminal tools, environment variables and aliases.
+Add and remove binaries to your global `$PATH` in this file.
 
 Go to [https://search.nixos.org](https://search.nixos.org/packages) to find the
 correct package names, though usually they will be what you expect them to be
@@ -19,43 +15,29 @@ If you want to update the versions of the available `unstable-packages`, run
 `nix flake update` to pull the latest version of the Nixpkgs repository and
 then apply the changes.
 
-Make sure to look at all the `FIXME` notices in the various files which are
-intended to direct you to places where you may want to make configuration
-tweaks.
+## [`flake.nix`](flake.nix)
+Dependencies.
+* `nixpkgs` is the current release of NixOS
+* `nixpkgs-unstable` is the current trunk branch of NixOS (ie. all the
+  latest packages)
+* `home-manager` is used to manage everything related to your home
+  directory (dotfiles etc.)
+* `nur` is the community-maintained [Nix User
+  Repositories](https://nur.nix-community.org/) for packages that may not
+  be available in the NixOS repository
+* `nixos-wsl` exposes important WSL-specific configuration options
+* `nix-index-database` tells you how to install a package when you run a
+  command which requires a binary not in the `$PATH`
+## [`wsl.nix`](wsl.nix)
+VM configuration:
+* hostname
+* default shell
+* user groups are set here
+* WSL configuration options
+* NixOS options
 
-## What Is Included
-
-This starter is a lightly-opinionated take on a productive terminal-driven
-development environment based on my own preferences. However, it is trivial to
-customize to your liking both by removing and adding tools that you prefer.
-
-* The default editor is `lvim`
-* `win32yank` is used to ensure perfect bi-directional copying and pasting to
-  and from Windows GUI applications and LunarVim running in WSL
-* The default shell is `zsh`
-* Native `docker` (ie. Linux, not Windows) is enabled by default
-* The prompt is [Starship](https://starship.rs/)
-* [`fzf`](https://github.com/junegunn/fzf),
-  [`lsd`](https://github.com/lsd-rs/lsd),
-  [`zoxide`](https://github.com/ajeetdsouza/zoxide), and
-  [`broot`](https://github.com/Canop/broot) are integrated into `zsh` by
-  default
-    * These can all be disabled easily by setting `enable = false` in
-      [home.nix](home.nix), or just removing the lines all together
-* [`direnv`](https://github.com/direnv/direnv) is integrated into `zsh` by
-  default
-* `git` config is generated in [home.nix](home.nix) with options provided to
-  enable private HTTPS clones with secret tokens
-* `zsh` config is generated in [home.nix](home.nix) and includes git aliases,
-  useful WSL aliases, and
-  [sensible`$WORDCHARS`](https://lgug2z.com/articles/sensible-wordchars-for-most-developers/)
-
-## Quickstart
-
-[![Watch the walkthrough video](https://img.youtube.com/vi/UmRXXYxq8k4/hqdefault.jpg)](https://www.youtube.com/watch?v=UmRXXYxq8k4)
-
-* Get the [latest NixOS-WSL
-  installer](https://github.com/nix-community/NixOS-WSL)
+# Installation
+* Get the [latest NixOS-WSL installer](https://github.com/nix-community/NixOS-WSL)
 * Install it (tweak the command to your desired paths):
 ```powershell
 wsl --import nixos $env:USERPROFILE\nix\ nixos-wsl.tar.gz
@@ -99,30 +81,28 @@ mv /tmp/configuration ~/configuration
 sudo nixos-rebuild switch --flake !$
 ```
 
-Note: If developing in Rust, you'll still be managing your toolchains and components like `rust-analyzer` with `rustup`!
+> [!Note]
+> If developing in Rust, you'll still be managing your toolchains and components like `rust-analyzer` with `rustup`!
 
-## Project Layout
+# Notes
+* The default editor is `lvim`
+* `win32yank` is used to ensure perfect bi-directional copying and pasting to
+  and from Windows GUI applications and LunarVim running in WSL
+* The default shell is `zsh`
+* Native `docker` (ie. Linux, not Windows) is enabled by default
+* The prompt is [Starship](https://starship.rs/)
+* [`fzf`](https://github.com/junegunn/fzf),
+  [`lsd`](https://github.com/lsd-rs/lsd),
+  [`zoxide`](https://github.com/ajeetdsouza/zoxide), and
+  [`broot`](https://github.com/Canop/broot) are integrated into `zsh` by
+  default
+    * These can all be disabled easily by setting `enable = false` in
+      [home.nix](home.nix), or just removing the lines all together
+* [`direnv`](https://github.com/direnv/direnv) is integrated into `zsh` by
+  default
+* `git` config is generated in [home.nix](home.nix) with options provided to
+  enable private HTTPS clones with secret tokens
+* `zsh` config is generated in [home.nix](home.nix) and includes git aliases,
+  useful WSL aliases, and
+  [sensible`$WORDCHARS`](https://lgug2z.com/articles/sensible-wordchars-for-most-developers/)
 
-In order to keep the template as approachable as possible for new NixOS users,
-this project uses a flat layout without any nesting or modularization.
-
-* `flake.nix` is where dependencies are specified
-    * `nixpkgs` is the current release of NixOS
-    * `nixpkgs-unstable` is the current trunk branch of NixOS (ie. all the
-      latest packages)
-    * `home-manager` is used to manage everything related to your home
-      directory (dotfiles etc.)
-    * `nur` is the community-maintained [Nix User
-      Repositories](https://nur.nix-community.org/) for packages that may not
-      be available in the NixOS repository
-    * `nixos-wsl` exposes important WSL-specific configuration options
-    * `nix-index-database` tells you how to install a package when you run a
-      command which requires a binary not in the `$PATH`
-* `wsl.nix` is where the VM is configured
-    * The hostname is set here
-    * The default shell is set here
-    * User groups are set here
-    * WSL configuration options are set here
-    * NixOS options are set here
-* `home.nix` is where packages, dotfiles, terminal tools, environment variables
-  and aliases are configured
