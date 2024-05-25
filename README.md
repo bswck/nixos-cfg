@@ -95,9 +95,6 @@ wsl -d nixos
 ```bash
 mv /tmp/configuration ~/configuration
 ```
-
-* Go through all the `FIXME:` notices in `~/configuration` and make changes
-  wherever you want
 * Apply the configuration
 ```bash
 sudo nixos-rebuild switch --flake !$
