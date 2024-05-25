@@ -213,6 +213,7 @@ in {
         "...." = "././..";
         cd = "z";
         gc = "nix-collect-garbage --delete-old";
+        rebuild = "git -C ${config.home.homeDirectory}/configuration pull && nixos-rebuild switch --flake .";
         refresh = "source ${config.home.homeDirectory}/.zshrc";
         show_path = "echo $PATH | tr ':' '\n'";
 
