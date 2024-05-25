@@ -12,6 +12,9 @@
   inputs.nixos-wsl.url = "github:nix-community/NixOS-WSL";
   inputs.nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
+  inputs.nix-ld-rs.url = "github:nix-community/nix-ld-rs";
+  inputs.nix-ld-rs.inputs.nixpkgs.follows = "nixpkgs";
+
   inputs.nix-index-database.url = "github:Mic92/nix-index-database";
   inputs.nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
