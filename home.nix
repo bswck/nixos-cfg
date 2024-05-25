@@ -18,6 +18,7 @@
     git
     git-crypt
     htop
+    hyperfine
     jq
     killall
     lunarvim
@@ -45,11 +46,11 @@
     (python310Full // { meta.priority = 0; })
     (python311Full // { meta.priority = 1; })
     (python312Full // { meta.priority = 2; })
-    python10Packages.black
-    python10Packages.ruff
-    python10Packages.pipx
-    python10Packages.poethepoet
-    python10Packages.pip-run
+    pythonPackages.black
+    pythonPackages.ruff
+    pythonPackages.pipx
+    pythonPackages.poethepoet
+    pythonPackages.pip-run
 
     # core languages
     rustup
