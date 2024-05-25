@@ -71,7 +71,7 @@ wsl -t nixos
 wsl -d nixos
 ```
 
-* `cd ~` and then `pwd` should now show `/home/<YOUR_USERNAME>`
+* `cd ~` and then `pwd` should now show `/home/bswck`
 * Move the configuration to your new home directory 
 ```bash
 mv /tmp/configuration ~/configuration
