@@ -40,11 +40,11 @@
     just
 
     # core languages
-    (python38 // { meta.priority = 4; })
-    (python39 // { meta.priority = 3; })
-    (python310 // { meta.priority = 0; })
-    (python311 // { meta.priority = 1; })
-    (python312 // { meta.priority = 2; })
+    (python38Full // { meta.priority = 4; })
+    (python39Full // { meta.priority = 3; })
+    (python310Full // { meta.priority = 0; })
+    (python311Full // { meta.priority = 1; })
+    (python312Full // { meta.priority = 2; })
     rustup
     nodejs
     typescript
