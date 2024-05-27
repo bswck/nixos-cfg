@@ -46,11 +46,6 @@
     (python310Full // { meta.priority = 0; })
     (python311Full // { meta.priority = 1; })
     (python312Full // { meta.priority = 2; })
-    pythonPackages.black
-    pythonPackages.ruff
-    pythonPackages.pipx
-    pythonPackages.poethepoet
-    pythonPackages.pip-run
 
     # core languages
     rustup
