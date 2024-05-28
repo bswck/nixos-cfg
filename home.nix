@@ -151,7 +151,14 @@ in {
       };
       userEmail = "bartoszpiotrslawecki@gmail.com";
       userName = "bswck";
+      signing = {
+          signByDefault = true;
+          key = "~/.ssh/id_ed25519.pub";
+      };
       extraConfig = {
+        gpg = {
+            format = "ssh";
+        };
         # url = {
         #   "https://oauth2:${secrets.github_token}@github.com" = {
         #     insteadOf = "https://github.com";
