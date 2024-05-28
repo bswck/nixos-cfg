@@ -95,7 +95,7 @@ in {
     username = "${username}";
     homeDirectory = "/home/${username}";
 
-    sessionVariables.EDITOR = "lvim";
+    sessionVariables.EDITOR = "nano";
     sessionVariables.SHELL = "/etc/profiles/per-user/${username}/bin/zsh";
   };
 
