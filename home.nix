@@ -173,7 +173,6 @@ in {
       };
     };
 
-    # FIXME: This is my .zshrc - you can fiddle with it if you want
     zsh = {
       enable = true;
       autocd = true;
