@@ -5,7 +5,6 @@
   inputs,
   ...
 }: {
-  # FIXME: change to your tz! look it up with "timedatectl list-timezones"
   time.timeZone = "Europe/Warsaw";
 
   networking.hostName = "${hostname}";
@@ -15,7 +14,6 @@
     "d /home/${username}/.config/lvim 0755 ${username} users"
   ];
 
-  # FIXME: change your shell here if you don't want zsh
   programs.zsh.enable = true;
   environment.pathsToLink = ["/share/zsh"];
   environment.shells = [pkgs.zsh];
@@ -24,20 +22,16 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  # FIXME: uncomment the next line to enable SSH
   # services.openssh.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
-    # FIXME: change your shell here if you don't want zsh
     shell = pkgs.zsh;
     extraGroups = [
       "wheel"
       "docker"
     ];
-    # FIXME: add your own hashed password
     # hashedPassword = "";
-    # FIXME: add your own ssh public key
     # openssh.authorizedKeys.keys = [
     #   "ssh-rsa ..."
     # ];
