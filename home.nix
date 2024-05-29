@@ -20,16 +20,14 @@
     hyperfine
     jq
     killall
-    lunarvim
     mosh
-    neovim
+    pipx
     procs
     ripgrep
     sd
     tmux
     tree
     unzip
-    vim
     wget
     zip
   ];
