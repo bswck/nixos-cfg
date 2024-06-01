@@ -226,7 +226,7 @@ in {
         bindkey '^p' history-search-backward
         bindkey '^n' history-search-forward
         bindkey '^e' end-of-line
-        bindkey '^w' forward-word
+        bindkey '^w' backward-kill-word
         bindkey "^[[3~" delete-char
         bindkey ";5C" forward-word
         bindkey ";5D" backward-word
