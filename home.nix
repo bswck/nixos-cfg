@@ -113,6 +113,11 @@ in {
 
     starship.enable = true;
     starship.settings = {
+      python.disabled = true;
+      ruby.disabled = true;
+      aws.disabled = true;
+      gcloud.disabled = true;
+      kubernetes.disabled = false;
       git_branch.style = "242";
       directory.style = "blue";
       directory.truncate_to_repo = false;
