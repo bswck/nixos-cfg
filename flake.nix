@@ -84,5 +84,6 @@
           ./wsl.nix
         ];
       };
+      nixosConfigurations.nixos = nixosConfigurations.royce;
     };
 }
