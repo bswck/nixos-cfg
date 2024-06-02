@@ -76,7 +76,7 @@
     in {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
 
-      nixosConfigurations.royce = mkNixosConfiguration {
+      royce = mkNixosConfiguration {
         hostname = "royce";
         username = "bswck";
         modules = [
@@ -84,6 +84,7 @@
           ./wsl.nix
         ];
       };
-      nixosConfigurations.nixos = nixosConfigurations.royce;
+      nixosConfigurations.nixos = royce;
+      nixosConfigurations.royce = royce;
     };
 }
