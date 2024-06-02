@@ -53,6 +53,9 @@
     cargo-cache
     cargo-expand
 
+    # cpp stuff
+    gcc-unwrapped
+
     # local dev stuf
     mkcert
     httpie
