@@ -50,6 +50,7 @@ wsl -d nixos
 
 * Set up a channel
 ```bash
+sudo nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 sudo nix-channel --update
 ```
 
